@@ -182,7 +182,7 @@ app.get('/verify', async (req, res) => {
     // Return JSON response
     return res.json({
       success: true,
-      amount: ethers.parseUnits(verifiedAmount, decimals).toString(),
+      amount: Number(ethers.parseUnits(verifiedAmount, decimals).toString()),
       transaction: {
         txid,
         block: blockNumber,
