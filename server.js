@@ -178,6 +178,7 @@ app.get('/verify', async (req, res) => {
     // Return JSON response
     return res.json({
       success: true,
+      amount,
       transaction: {
         txid,
         block: blockNumber,
